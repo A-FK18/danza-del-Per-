@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="selva.css">
+   
+</head>
+<body>
+<h1>danza del  la selva del peru</h1>
+<p>La selva del Perú es una región rica en biodiversidad y en expresiones culturales que reflejan la profunda conexión de sus pueblos con la naturaleza. Sus danzas están ligadas a rituales ancestrales, celebraciones comunitarias y expresiones de identidad amazónica. Se distinguen por el uso de plumas, semillas, tambores y cantos que evocan a los espíritus de la selva y muestran la alegría y fuerza de sus habitantes.</p>
+
+
+
+
+
+
+<div class="slideshow">
+
+  <img id="imagen" src="" alt="Foto actual">
+
+ </div>
+
+
+
+ <script>
+
+  // Lista de imágenes
+
+  const imagenes = [
+
+    "selva/selva1.jpg",
+    "selva/selva2.jpg",
+    "selva/selva3.jpg",
+    "selva/selva4.jpg",
+    "selva/selva5.jpg",
+    "selva/selva6.jpg",
+    "selva/selva7.jpg",
+    "selva/selva8.jpg",
+    "selva/selva9.jpg",
+    "selva/selva10.jpg",
+
+  ];
+
+
+
+  let indice = 0;
+
+  const img = document.getElementById("imagen");
+
+
+
+  function mostrarSiguienteFoto() {
+
+   // Cambiar la imagen con opacidad
+
+   img.style.opacity = 0;
+
+
+
+   setTimeout(() => {
+
+    img.src = imagenes[indice];
+
+    img.style.opacity = 1;
+
+
+
+    indice = (indice + 1) % imagenes.length; // volver al inicio al final
+
+   }, 500);
+
+  }
+
+
+
+  // Mostrar la primera imagen al cargar
+
+  mostrarSiguienteFoto();
+
+
+
+  // Cambiar imagen cada 3 segundos
+
+  setInterval(mostrarSiguienteFoto, 3000);
+
+ </script>
+ <div>
+
+    <footer>
+        <p>
+
+        </p>
+    </footer>
+ </div>
+
+
+</body>
+</html>

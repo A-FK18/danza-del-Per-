@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="costa.css">
+   
+</head>
+<body>
+<h1>danza del peru</h1>
+<p>Las danzas de la costa peruana se caracterizan por su alegría, picardía y elegancia, muchas de ellas con raíces afroperuanas y mestizas, expresando cortejo, celebración y vida festiva.</p>
+
+
+
+
+
+
+<div class="slideshow">
+
+  <img id="imagen" src="" alt="Foto actual">
+
+ </div>
+
+
+
+ <script>
+
+  // Lista de imágenes
+
+  const imagenes = [
+
+    "costa/danza1.png",
+    "costa/danza2.jpg",
+    "costa/danza3.png",
+    "costa/danza4.jpg",
+    "costa/danza5.png",
+    "costa/danza6.png",
+    "costa/danza7.jpg",
+    "costa/danza8.png",
+    "costa/danza9.png",
+    "costa/danza10.jpg",
+
+  ];
+
+
+
+  let indice = 0;
+
+  const img = document.getElementById("imagen");
+
+
+
+  function mostrarSiguienteFoto() {
+
+   // Cambiar la imagen con opacidad
+
+   img.style.opacity = 0;
+
+
+
+   setTimeout(() => {
+
+    img.src = imagenes[indice];
+
+    img.style.opacity = 1;
+
+
+
+    indice = (indice + 1) % imagenes.length; // volver al inicio al final
+
+   }, 500);
+
+  }
+
+
+
+  // Mostrar la primera imagen al cargar
+
+  mostrarSiguienteFoto();
+
+
+
+  // Cambiar imagen cada 3 segundos
+
+  setInterval(mostrarSiguienteFoto, 3000);
+
+ </script>
+ <div>
+
+    <footer>
+        <p>
+
+        </p>
+    </footer>
+ </div>
+
+
+</body>
+</html>
